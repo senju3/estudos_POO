@@ -1,14 +1,17 @@
 class Car {
-    constructor () {
-        this.name = '',
-        this.brand = '',
-        this.model = '',
-        this.year = 0,
-        this.price = 0
+    constructor (name, price, model, year, brand) {
+        this.name = name,
+        this.brand = brand,
+        this.model = model,
+        this.year = year,
+        this.price = price
     }
 
     inspect () {
-
+        console.log(`
+            nome: ${this.name}
+            preço: ${this.price} R$
+        `)
     }
 
     buy () {
@@ -19,3 +22,6 @@ class Car {
         
     }
 }
+
+let civic = new Car("civic", 50000)
+civic.inspect()
